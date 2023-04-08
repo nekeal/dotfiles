@@ -1,0 +1,26 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+export LANG=en_US.UTF-8
+export PATH=$PATH:/home/sccad/.local/bin
+
+[ -f ~/.zinit/bin/zinit.zsh ] && source ~/.zinit/bin/zinit.zsh
+
+
+# Load custom shell files from ~/.zsh/
+for file in ~/.fzf.zsh \
+            ~/.p10k.zsh \
+            ~/.zsh/zinit_plugins.zsh \
+            ~/.zsh/aliases.zsh \
+            ~/.p10k.zsh 
+do
+   [ -s $file ] && source $file
+done
+
+
+
+autoload -Uz compinit; compinit; zinit cdreplay -q
