@@ -1,62 +1,35 @@
-[general]
+[global]
 upgrade_only = true
+system = "linux/amd64"
 
 ["brave/brave-browser"] # https://github.com/brave/brave-browser
-target = "/usr/local/bin"
-asset_filters = ["^asc"]
+target = "~/.local/bin"
+system = "linux/amd64"
+asset_filters = ["^asc", "amd64"]
 
 ["BurntSushi/ripgrep"] # https://github.com/BurntSushi/ripgrep
-target = "/usr/local/bin"
-
-
-["chezmoi/chezmoi"] # https://github.com/chezmoi/chezmoi
-target = "/usr/local/bin"
-
-
-["chezmoiz/chezmoiz"] # https://github.com/chezmoiz/chezmoiz
-target = "/usr/local/bin"
-
-
-["cli/cli"] # https://github.com/cli/cli
-target = "/usr/local/bin"
-
-
-["cloudflare/cf-terraforming"] # https://github.com/cloudflare/cf-terraforming
-target = "/usr/local/bin"
-
-
-["eget/eget"] # https://github.com/eget/eget
-target = "/usr/local/bin"
-
-
-["GoogleCloudPlatform/terraformer"] # https://github.com/GoogleCloudPlatform/terraformer
-target = "/usr/local/bin"
-
-
-["hovancik/stretchly"] # https://github.com/hovancik/stretchly
-target = "/usr/local/bin"
-
-
-["jesseduffield/lazydocker"] # https://github.com/jesseduffield/lazydocker
-target = "/usr/local/bin"
-
-
-["neovim/neovim"] # https://github.com/neovim/neovim
-target = "/usr/local/bin"
-
+target = "~/.local/bin/rg"
+asset_filters = ["gnu"]
 
 ["sharkdp/fd"] # https://github.com/sharkdp/fd
-target = "/usr/local/bin"
+target = "~/.local/bin"
+asset_filters = ["gnu"]
 
+["sharkdp/bat"] # https://github.com/sharkdp/bat
+target = "~/.local/bin"
+asset_filters = ["gnu"]
 
-["twpayne/chezmoi"] # https://github.com/twpayne/chezmoi
-target = "/usr/local/bin"
-
+["cli/cli"] # https://github.com/cli/cli
+target = "~/.local/bin"
+asset_filters = ["tar.gz"]
 
 ["zyedidia/eget"] # https://github.com/zyedidia/eget
-target = "/usr/local/bin"
+target = "~/.local/bin"
 
+["jdxcode/rtx"]
+target = "~/.local/bin"
+asset_filters = ["tar.gz"]
 
-["zyedidia/micro"] # https://github.com/zyedidia/micro
-target = "/usr/local/bin"
+["dbrgn/tealdeer"]
+target = "~/.local/bin/tldr"
 

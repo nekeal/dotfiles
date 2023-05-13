@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export LANG=en_US.UTF-8
-export PATH=$PATH:/home/sccad/.local/bin
+export PATH=$PATH:{{ .chezmoi.homeDir }}/.local/bin
 
 [ -f ~/.zinit/bin/zinit.zsh ] && source ~/.zinit/bin/zinit.zsh
 
