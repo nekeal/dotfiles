@@ -1,4 +1,4 @@
-[global]
+[gobal]
 upgrade_only = true
 system = "linux/amd64"
 
@@ -33,3 +33,6 @@ asset_filters = ["tar.gz"]
 ["dbrgn/tealdeer"]
 target = "~/.local/bin/tldr"
 
+["yt-dlp/yt-dlp"] # https://github.com/yt-dlp/yt-dlp
+target = "~/.local/bin/"
+asset_filters = ["^arm", "^arch", "^zip"]
