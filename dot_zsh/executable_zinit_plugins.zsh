@@ -41,3 +41,4 @@ zinit ice as=completions pick=completions/_rtx atinit="$(rtx activate zsh)"; zi 
 
 zinit load agkozak/zsh-z
 zinit ice atclone="pip3 install ." atpull="%atclone" pick="virtualenvwrapper_lazy.sh" ver="4.8.4"; zinit load python-virtualenvwrapper/virtualenvwrapper
+zinit load fourdim/zsh-poetry
