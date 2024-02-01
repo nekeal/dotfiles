@@ -37,7 +37,8 @@ zinit ice depth"1" multisrc"shell/{completion,key-bindings}.zsh" pick="/dev/null
 zinit ice wait=!0 lucid; zinit load lukechilds/zsh-nvm
 zinit ice sbin=bin/{tfenv,terraform}; zinit load tfutils/tfenv
 zinit ice sbin=bin/{tgenv,terragrunt}; zinit load cunymatthieu/tgenv
-zinit ice as=completions pick=completions/_rtx atinit="$(rtx activate zsh)"; zi load jdxcode/rtx
+#zinit ice as=completions pick=completions/_rtx atinit="$(rtx activate zsh)"; zi load jdxcode/rtx
+zinit ice as=completions pick=completions/_mise atinit="$(mise activate zsh)"; zi load jdx/mise  
 
 zinit load agkozak/zsh-z
 zinit ice atclone="pip3 install ." atpull="%atclone" pick="virtualenvwrapper_lazy.sh" ver="4.8.4"; zinit load python-virtualenvwrapper/virtualenvwrapper

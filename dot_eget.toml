@@ -1,4 +1,4 @@
-[gobal]
+[global]
 upgrade_only = true
 system = "linux/amd64"
 
@@ -9,7 +9,7 @@ asset_filters = ["^asc", "amd64"]
 
 ["BurntSushi/ripgrep"] # https://github.com/BurntSushi/ripgrep
 target = "~/.local/bin/rg"
-asset_filters = ["gnu"]
+asset_filters = ["x86_64"]
 
 ["sharkdp/fd"] # https://github.com/sharkdp/fd
 target = "~/.local/bin"
@@ -26,9 +26,9 @@ asset_filters = ["tar.gz"]
 ["zyedidia/eget"] # https://github.com/zyedidia/eget
 target = "~/.local/bin"
 
-["jdxcode/rtx"]
+["jdx/mise"]
 target = "~/.local/bin"
-asset_filters = ["tar.gz"]
+asset_filters = ["tar.gz", "^musl"]
 
 ["dbrgn/tealdeer"]
 target = "~/.local/bin/tldr"
