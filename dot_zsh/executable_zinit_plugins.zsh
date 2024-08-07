@@ -30,16 +30,15 @@ zinit load supercrabtree/k
 zinit load sparsick/ansible-zsh
 zinit load Tarrasch/zsh-autoenv
 zinit load djui/alias-tips
-zinit ice atload="autoload -U +X bashcompinit && bashcompinit" zinit load macunha1/zsh-terraform
-#zinit ice wait=!0 lucid; zinit ice atload='[[ $VIRTUAL_ENV ]]; export PATH=$VIRTUAL_ENV/bin:$PATH'; zinit load mattberther/zsh-pyenv # it prevents overriding PATH when using virtualenv
+
 zinit ice as=command from=gh-r sbin=fzf id-as=fzf; zinit load junegunn/fzf
 zinit ice depth"1" multisrc"shell/{completion,key-bindings}.zsh" pick="/dev/null"; zinit load junegunn/fzf
 zinit ice wait=!0 lucid; zinit load lukechilds/zsh-nvm
 zinit ice sbin=bin/{tfenv,terraform}; zinit load tfutils/tfenv
 zinit ice sbin=bin/{tgenv,terragrunt}; zinit load cunymatthieu/tgenv
-#zinit ice as=completions pick=completions/_rtx atinit="$(rtx activate zsh)"; zi load jdxcode/rtx
 zinit ice as=completions pick=completions/_mise atinit="$(mise activate zsh)"; zi load jdx/mise  
 
-zinit load agkozak/zsh-z
+zinit ice depth=1 as="completion" src="contrib/completion/git-completion.bash" mv="contrib/completion/git-completion.zsh -> _git"; zinit load git/git
+zi ice as=command from=gh-r atclone"./zoxide init zsh > init.zsh" atpull"%atclone" src"init.zsh" nocompile'!'; zinit load ajeetdsouza/zoxide
 zinit ice atclone="pip3 install ." atpull="%atclone" pick="virtualenvwrapper_lazy.sh" ver="4.8.4"; zinit load python-virtualenvwrapper/virtualenvwrapper
 zinit load fourdim/zsh-poetry
