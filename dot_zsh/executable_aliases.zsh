@@ -10,3 +10,5 @@ alias ghmru="ghpr update"
 alias ghrv="gh repo view"
 alias ghrvw="gh repo view --web"
 
+# poetry
+alias pos="poetry shell"
