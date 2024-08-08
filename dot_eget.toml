@@ -3,7 +3,7 @@ upgrade_only = true
 system = "linux/amd64"
 
 ["brave/brave-browser"] # https://github.com/brave/brave-browser
-target = "~/.local/bin"
+target = "~/.local/bin/"
 system = "linux/amd64"
 asset_filters = ["^asc", "amd64"]
 
@@ -12,22 +12,22 @@ target = "~/.local/bin/rg"
 asset_filters = ["x86_64"]
 
 ["sharkdp/fd"] # https://github.com/sharkdp/fd
-target = "~/.local/bin"
+target = "~/.local/bin/"
 asset_filters = ["gnu"]
 
 ["sharkdp/bat"] # https://github.com/sharkdp/bat
-target = "~/.local/bin"
+target = "~/.local/bin/"
 asset_filters = ["gnu"]
 
 ["cli/cli"] # https://github.com/cli/cli
-target = "~/.local/bin"
+target = "~/.local/bin/"
 asset_filters = ["tar.gz"]
 
 ["zyedidia/eget"] # https://github.com/zyedidia/eget
-target = "~/.local/bin"
+target = "~/.local/bin/"
 
 ["jdx/mise"]
-target = "~/.local/bin"
+target = "~/.local/bin/"
 asset_filters = ["tar.gz", "^musl"]
 
 ["dbrgn/tealdeer"]
@@ -36,3 +36,6 @@ target = "~/.local/bin/tldr"
 ["yt-dlp/yt-dlp"] # https://github.com/yt-dlp/yt-dlp
 target = "~/.local/bin/"
 asset_filters = ["^arm", "^arch", "^zip"]
+
+["neovim/neovim"] # https://github.com/neovim/neovim
+target = "/usr/local/bin/"
