@@ -27,7 +27,6 @@ zinit ice blockf; zinit load zsh-users/zsh-completions
 zinit ice depth=1; zinit load romkatv/powerlevel10k
 zinit load zpm-zsh/clipboard
 zinit load zpm-zsh/undollar
-zinit load z-shell/F-Sy-H
 zinit load supercrabtree/k
 zinit load sparsick/ansible-zsh
 zinit load Tarrasch/zsh-autoenv
@@ -46,3 +45,4 @@ zi ice as=command from=gh-r atclone"./zoxide init zsh > init.zsh" atpull"%atclon
 
 zinit ice atclone="pip3 install ." atpull="%atclone" pick="virtualenvwrapper_lazy.sh" ver="4.8.4"; zinit load python-virtualenvwrapper/virtualenvwrapper
 
+zinit ice wait lucid; zi load zdharma-continuum/fast-syntax-highlighting
