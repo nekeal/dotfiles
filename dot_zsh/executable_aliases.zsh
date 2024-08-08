@@ -12,3 +12,6 @@ alias ghrvw="gh repo view --web"
 
 # poetry
 alias pos="poetry shell"
+
+#git
+alias gacc='ga CHANGELOG.md && gc CHANGELOG.md -m "Update CHANGELOG.md"'
