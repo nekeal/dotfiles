@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nekeal Coding Standards"
+  short_description: "Apply Nekeal coding standards"
+  default_prompt: "Use $nekeal-coding-standards to write, review, or refactor code according to Nekeal's coding standards."
